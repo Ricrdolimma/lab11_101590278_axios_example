@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #172b33;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.page-header {
+    padding: 20px 16px;
+    background: #28a745;
+    text-align: center;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+main {
+    padding: 12px 16px;
+}
+
+.person-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.person-card {
+    margin-bottom: 20px;
+    padding: 16px;
+    background: #17a2b8;
+}
+
+.person-card h2 {
+    margin: 0 0 24px;
+    font-size: 14px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.person-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.person-photo {
+    display: flex;
+    flex: 0 0 220px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.person-photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.person-photo button {
+    padding: 8px 12px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.person-photo button:hover {
+    background: #0069d9;
+}
+
+.person-info {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+}
+
+.person-info > div {
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.person-info dt {
+    text-align: right;
+}
+
+.person-info dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.person-details {
+    margin-top: 16px;
+    padding: 12px;
+    border-top: 1px solid #117888;
+}
+
+@media (max-width: 600px) {
+    .person-content {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .person-photo {
+        flex-basis: auto;
+        align-self: center;
+    }
+
+    .person-info {
+        width: 100%;
+    }
+
+    .person-info > div {
+        grid-template-columns: 110px minmax(0, 1fr);
+        gap: 12px;
+    }
+}
